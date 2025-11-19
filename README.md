@@ -115,3 +115,9 @@ Der Parameter `size=50` liefert nur die ersten 50 Treffer und ist hier bei den m
 
 * Bibliographie (z.B. `Döblin-Bibliographie, Kracauer-Bibliographie, Schiller-Bibliographie`):<br>
 [https://dataservice.dla-marbach.de/v1/records? **q=filterBibliography_mv:%22Döblin-Bibliographie%22** &size=50](https://dataservice.dla-marbach.de/v1/records?q=filterBibliography_mv:%22Döblin-Bibliographie%22&size=50)
+
+## Solr Join Query
+
+* Personen mit Geschlechtsangabe "weiblich", die Urheber von Publikationen des Verlags Cotta sind:
+  * Count: https://dataservice.dla-marbach.de/v1/records/count?q=id:PE*%20AND%20gender:weiblich%20AND%20{!join%20from=creator_id_mv%20to=id}publisher_display_mv:Cotta
+  * Datensätze: https://dataservice.dla-marbach.de/v1/records?q=id:PE*%20AND%20gender:weiblich%20AND%20{!join%20from=creator_id_mv%20to=id}publisher_display_mv:Cotta
