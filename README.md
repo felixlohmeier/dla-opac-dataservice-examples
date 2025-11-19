@@ -13,7 +13,9 @@ Der Datendienst DLA Data+ bietet einen offenen Zugang (CC0-Lizenz) zu den Katalo
 ## Jupyter Notebooks
 
 Beispiele für komplexe Fragestellungen an die Katalogdaten des DLA, gelöst mit Python:
-* [Wie hoch ist der Anteil an publizierenden Frauen bei den Verlagen Cotta, Insel und Rotbuch?](gender-verlage.ipynb)
+* Wie hoch ist der Anteil an publizierenden Frauen bei den Verlagen Cotta, Insel und Rotbuch?
+  * Komplexe Lösung mit lokaler Filterung: [gender-verlage.ipynb](gender-verlage.ipynb)
+  * Vereinfachte Lösung mit Solr Join Query: [gender-verlage-simple.ipynb](gender-verlage-simple.ipynb)
 * Wie ist die Verteilung von Primär- und Sekundärliteratur bei einzelnen Autorinnen und Autoren über die Jahre?
 * Wie ist die Verteilung von Übersetzungen (sprachlich wie zeitlich)?
 
